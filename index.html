@@ -78,9 +78,9 @@
 
     <h3>ReMe</h3>
     <ul>
-      <li><a id="reme-terms" href="#">Terms & Conditions</a></li>
-      <li><a id="reme-privacy" href="#">Privacy Policy</a></li>
-      <li><a id="reme-licenses" href="#">Licenses</a></li>
+      <li><a id="reme-terms" href="#"></a></li>
+      <li><a id="reme-privacy" href="#"></a></li>
+      <li><a id="reme-licenses" href="#"></a></li>
     </ul>
 
     <h2 id="contact-title"></h2>
@@ -110,7 +110,10 @@
         contactTitle: "Kontakt",
         imprintTitle: "Impressum",
         imprintText:
-          "Althigro Software UG (haftungsbeschränkt)<br />Bergmannstr. 3<br />80339 München<br />Deutschland<br /><br />Geschäftsführer: Alexander Groß, Matthias Groß<br />Handelsregister: HRB 303179, Amtsgericht München"
+          "Althigro Software UG (haftungsbeschränkt)<br />Bergmannstr. 3<br />80339 München<br />Deutschland<br /><br />Geschäftsführer: Alexander Groß, Matthias Groß<br />Handelsregister: HRB 303179, Amtsgericht München",
+        remeTermsLabel: "Allgemeine Geschäftsbedingungen",
+        remePrivacyLabel: "Datenschutzerklärung",
+        remeLicensesLabel: "Lizenzen"
       },
       en: {
         title: "Althigro Software UG (limited liability)",
@@ -121,7 +124,10 @@
         contactTitle: "Contact",
         imprintTitle: "Legal notice",
         imprintText:
-          "Althigro Software UG (limited liability)<br />Bergmannstr. 3<br />80339 Munich<br />Germany<br /><br />Managing Directors: Alexander Groß, Matthias Groß<br />Commercial Register: HRB 303179, Munich District Court"
+          "Althigro Software UG (limited liability)<br />Bergmannstr. 3<br />80339 Munich<br />Germany<br /><br />Managing Directors: Alexander Groß, Matthias Groß<br />Commercial Register: HRB 303179, Munich District Court",
+        remeTermsLabel: "Terms & Conditions",
+        remePrivacyLabel: "Privacy Policy",
+        remeLicensesLabel: "Licenses"
       }
     };
 
@@ -136,9 +142,17 @@
     document.getElementById("imprint-title").innerText = t.imprintTitle;
     document.getElementById("imprint-text").innerHTML = t.imprintText;
 
-    document.getElementById("reme-terms").href = `reme-terms-conditions.html?lang=${lang}`;
-    document.getElementById("reme-privacy").href = `reme-privacy.html?lang=${lang}`;
-    document.getElementById("reme-licenses").href = `reme-licenses.html?lang=${lang}`;
+    const terms = document.getElementById("reme-terms");
+    const privacy = document.getElementById("reme-privacy");
+    const licenses = document.getElementById("reme-licenses");
+
+    terms.href = `reme-terms-conditions.html?lang=${lang}`;
+    privacy.href = `reme-privacy.html?lang=${lang}`;
+    licenses.href = `reme-licenses.html?lang=${lang}`;
+
+    terms.innerText = t.remeTermsLabel;
+    privacy.innerText = t.remePrivacyLabel;
+    licenses.innerText = t.remeLicensesLabel;
   </script>
 </body>
 </html>
