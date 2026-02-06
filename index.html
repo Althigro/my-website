@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Althigro Software UG (haftungsbeschränkt)</title>
+
   <style>
     body {
       font-family: sans-serif;
@@ -12,10 +13,20 @@
       color: #333;
     }
     header {
-      background: #FFFFFF;  /* stays white */
-      color: #262C34;        /* new text color */
+      background: #FFFFFF;
+      color: #262C34;
       padding: 2rem;
       text-align: center;
+      position: relative;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.9rem;
+    }
+    .lang-switch a {
+      margin-left: 0.5rem;
     }
     main {
       max-width: 700px;
@@ -34,6 +45,9 @@
     h2 {
       margin-top: 2rem;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
     a {
       color: #0077cc;
       text-decoration: none;
@@ -43,36 +57,88 @@
     }
   </style>
 </head>
+
 <body>
   <header>
+    <div class="lang-switch">
+      🌐
+      <a href="?lang=de">DE</a> |
+      <a href="?lang=en">EN</a>
+    </div>
+
     <img src="./logo.svg" alt="Logo" width="150" />
-    <h1>Althigro Software UG (haftungsbeschränkt)</h1>
+    <h1 id="title"></h1>
   </header>
 
   <main>
-    <h2>Über uns</h2>
-    <p>Die Althigro Software UG (haftungsbeschränkt) ist zuständig für Entwicklung, den Vertrieb und die Lizenzierung von Softwarelösungen sowie die Erbringung von IT-Dienstleistungen, insbesondere Beratung, Schulung und Support im Bereich Softwareentwicklung. Das Unternehmen bietet zudem digitale Apps insbesondere zur Dokumentenverwaltung und Software-as-a-Service (SaaS) an sowie alle damit zusammenhängenden oder förderlichen Geschäfte.</p>
+    <h2 id="about-title"></h2>
+    <p id="about-text"></p>
 
-    <h2>Kontakt</h2>
+    <h2 id="apps-title"></h2>
+
+    <h3>ReMe</h3>
+    <ul>
+      <li><a id="reme-terms" href="#">Terms & Conditions</a></li>
+      <li><a id="reme-privacy" href="#">Privacy Policy</a></li>
+      <li><a id="reme-licenses" href="#">Licenses</a></li>
+    </ul>
+
+    <h2 id="contact-title"></h2>
     <p>
-      E-Mail: <a href="mailto:info@althigro.com">info@althigro.com</a><br />
+      E-Mail: <a href="mailto:info@althigro.com">info@althigro.com</a>
     </p>
 
-    <h2>Impressum</h2>
-    <p>
-      Althigro Software UG (haftungsbeschränkt)<br />
-      Bergmannstr. 3<br />
-      80339 München<br />
-      Deutschland
-    </p>
-    <p>
-      Geschäftsführer: Alexander Groß, Matthias Groß<br />
-      Handelsregister: HRB 303179, Amtsgericht München<br />
-    </p>
+    <h2 id="imprint-title"></h2>
+    <p id="imprint-text"></p>
   </main>
 
   <footer>
     &copy; 2025 Althigro Software UG (haftungsbeschränkt)
   </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang") === "en" ? "en" : "de";
+
+    const texts = {
+      de: {
+        title: "Althigro Software UG (haftungsbeschränkt)",
+        aboutTitle: "Über uns",
+        aboutText:
+          "Die Althigro Software UG (haftungsbeschränkt) ist zuständig für Entwicklung, den Vertrieb und die Lizenzierung von Softwarelösungen sowie die Erbringung von IT-Dienstleistungen, insbesondere Beratung, Schulung und Support im Bereich Softwareentwicklung. Das Unternehmen bietet zudem digitale Apps insbesondere zur Dokumentenverwaltung und Software-as-a-Service (SaaS) an sowie alle damit zusammenhängenden oder förderlichen Geschäfte.",
+        appsTitle: "Apps",
+        contactTitle: "Kontakt",
+        imprintTitle: "Impressum",
+        imprintText:
+          "Althigro Software UG (haftungsbeschränkt)<br />Bergmannstr. 3<br />80339 München<br />Deutschland<br /><br />Geschäftsführer: Alexander Groß, Matthias Groß<br />Handelsregister: HRB 303179, Amtsgericht München"
+      },
+      en: {
+        title: "Althigro Software UG (limited liability)",
+        aboutTitle: "About us",
+        aboutText:
+          "Althigro Software UG (limited liability) is responsible for the development, distribution and licensing of software solutions as well as the provision of IT services, in particular consulting, training and support in the field of software development. The company also offers digital applications, especially for document management and software-as-a-service (SaaS), as well as all related or supporting business activities.",
+        appsTitle: "Apps",
+        contactTitle: "Contact",
+        imprintTitle: "Legal notice",
+        imprintText:
+          "Althigro Software UG (limited liability)<br />Bergmannstr. 3<br />80339 Munich<br />Germany<br /><br />Managing Directors: Alexander Groß, Matthias Groß<br />Commercial Register: HRB 303179, Munich District Court"
+      }
+    };
+
+    const t = texts[lang];
+
+    document.documentElement.lang = lang;
+    document.getElementById("title").innerText = t.title;
+    document.getElementById("about-title").innerText = t.aboutTitle;
+    document.getElementById("about-text").innerText = t.aboutText;
+    document.getElementById("apps-title").innerText = t.appsTitle;
+    document.getElementById("contact-title").innerText = t.contactTitle;
+    document.getElementById("imprint-title").innerText = t.imprintTitle;
+    document.getElementById("imprint-text").innerHTML = t.imprintText;
+
+    document.getElementById("reme-terms").href = `reme-terms-conditions.html?lang=${lang}`;
+    document.getElementById("reme-privacy").href = `reme-privacy.html?lang=${lang}`;
+    document.getElementById("reme-licenses").href = `reme-licenses.html?lang=${lang}`;
+  </script>
 </body>
 </html>
