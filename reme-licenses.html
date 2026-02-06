@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReMe · Lizenzen / Licenses</title>
+  <meta name="description" content="ReMe Lizenzen/Licenses: Drittanbieter-Software für iOS und Android (AdMob, Google UMP, ZIPFoundation) inkl. Lizenztexte.">
+  <meta name="robots" content="index,follow">
+  <!-- Tip for GitHub Pages: keep all links/refs relative and avoid absolute root slashes -->
+  <style>
+    :root { color-scheme: light dark; }
+    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:#222;line-height:1.55}
+    header,footer{padding:1.5rem 1rem;text-align:center;border-bottom:1px solid #eee}
+    footer{border-top:1px solid #eee;border-bottom:none}
+    main{max-width:860px;margin:1.5rem auto;padding:0 1rem 3rem}
+    h1,h2,h3{margin:1.2rem 0 .6rem}
+    .card{background:#fff;border:1px solid #eee;border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+    .muted{color:#666;font-size:.95rem}
+    .langswitch{display:flex;gap:.5rem;justify-content:center;margin:.5rem 0 0}
+    .langswitch button{border:1px solid #ddd;background:#fafafa;padding:.4rem .8rem;border-radius:999px;cursor:pointer}
+    .langswitch button[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
+    .hide{display:none}
+    a{color:#0b61ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    ul{margin:.2rem 0 .8rem 1.2rem}
+    .pillrow{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0 0}
+    .pill{border:1px solid #ddd;background:#fafafa;padding:.35rem .75rem;border-radius:999px;cursor:pointer}
+    .pill[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
+    pre{white-space:pre-wrap;word-break:break-word;background:#f6f6f6;border:1px solid #eee;border-radius:12px;padding:1rem;margin:.8rem 0;overflow:auto}
+    @media (prefers-color-scheme: dark){
+      body{background:#0b0b0b;color:#eaeaea}
+      header,footer{border-color:#222}
+      .card{background:#111;border-color:#222}
+      .muted{color:#aaa}
+      .langswitch button{background:#1a1a1a;border-color:#333;color:#ddd}
+      .langswitch button[aria-pressed="true"]{background:#0b61ff;border-color:#0b61ff;color:#fff}
+      a{color:#6aa8ff}
+      .pill{background:#1a1a1a;border-color:#333;color:#ddd}
+      .pill[aria-pressed="true"]{background:#0b61ff;border-color:#0b61ff;color:#fff}
+      pre{background:#0f0f0f;border-color:#222}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <img src="logo.svg" alt="Althigro Logo" width="110" height="110" style="aspect-ratio:1/1" />
+  <h1 id="title-de">Lizenzen · ReMe</h1>
+  <h1 id="title-en" class="hide">Licenses · ReMe</h1>
+
+  <div class="langswitch" aria-label="Language">
+    <button id="btn-de" aria-pressed="true">DE</button>
+    <button id="btn-en" aria-pressed="false">EN</button>
+  </div>
+
+  <div class="pillrow" aria-label="Platform">
+    <button id="btn-ios" class="pill" aria-pressed="true">iOS</button>
+    <button id="btn-android" class="pill" aria-pressed="false">Android</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== DE ===================== -->
+  <section id="de">
+    <div class="card">
+      <h2>Über diese Seite</h2>
+      <p><strong>ReMe</strong> nutzt bestimmte Drittanbieter-Bibliotheken und Open-Source-Pakete. Wir verwenden diese Komponenten im Einklang mit den jeweiligen Lizenzbedingungen.</p>
+      <p>Mit der Nutzung der App bestätigst du, dass:</p>
+      <ul>
+        <li>Teile der App Drittanbieter-Code enthalten können, der unter Open-Source- oder anderen Lizenzen steht.</li>
+        <li>Die verwendeten Pakete und ihre Lizenzen in der App bzw. auf dieser Seite aufgeführt sind.</li>
+      </ul>
+      <p class="muted">Kontakt: <a href="mailto:info@althigro.com">info@althigro.com</a> · Althigro Software UG (haftungsbeschränkt)</p>
+    </div>
+
+    <!-- DE iOS -->
+    <section id="de-ios">
+      <h2>Drittanbieter-Lizenzen · iOS</h2>
+
+      <div class="card">
+        <h3>Google Mobile Ads SDK (AdMob)</h3>
+        <ul>
+          <li>Anbieter: Google LLC</li>
+          <li>Zweck: Ausspielung von In-App-Werbung</li>
+          <li>Richtlinien/Infos:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google Nutzungsbedingungen</a><br>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Google User Messaging Platform SDK (UMP)</h3>
+        <ul>
+          <li>Anbieter: Google LLC</li>
+          <li>Zweck: Einholung und Verwaltung von Einwilligungen gemäß Datenschutzvorgaben (z. B. GDPR/CCPA)</li>
+          <li>Richtlinien/Infos:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a><br>
+          <a href="https://developers.google.com/admob/ump" target="_blank" rel="noopener">UMP Dokumentation</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ZIPFoundation</h3>
+        <ul>
+          <li>Autor: Thomas Zoechling</li>
+          <li>Website: <a href="https://www.peakstep.com" target="_blank" rel="noopener">peakstep.com</a></li>
+          <li>Lizenz: MIT License</li>
+        </ul>
+        <h4>MIT License</h4>
+        <pre>Copyright (c) 2017-2024 Thomas Zoechling (https://www.peakstep.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+      </div>
+
+      <div class="card">
+        <h3>Disclaimer</h3>
+        <p>Wir beanspruchen kein Eigentum an Drittanbieter-Komponenten und nennen die jeweiligen Autor:innen und Mitwirkenden entsprechend.</p>
+        <p>Einzelne Lizenzen können dir Rechte zum Verwenden, Kopieren, Modifizieren und Weiterverbreiten einräumen – oft unter bestimmten Bedingungen. Maßgeblich ist jeweils der Lizenztext des Pakets.</p>
+      </div>
+    </section>
+
+    <!-- DE Android -->
+    <section id="de-android" class="hide">
+      <h2>Drittanbieter-Lizenzen · Android</h2>
+
+      <div class="card">
+        <h3>Google Mobile Ads SDK (AdMob)</h3>
+        <ul>
+          <li>Anbieter: Google LLC</li>
+          <li>Zweck: Ausspielung von In-App-Werbung</li>
+          <li>Richtlinien/Infos:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google Nutzungsbedingungen</a><br>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Google User Messaging Platform SDK (UMP)</h3>
+        <ul>
+          <li>Anbieter: Google LLC</li>
+          <li>Zweck: Einholung und Verwaltung von Einwilligungen gemäß Datenschutzvorgaben (z. B. GDPR/CCPA)</li>
+          <li>Richtlinien/Infos:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a><br>
+          <a href="https://developers.google.com/admob/ump" target="_blank" rel="noopener">UMP Dokumentation</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Disclaimer</h3>
+        <p>Wir beanspruchen kein Eigentum an Drittanbieter-Komponenten und nennen die jeweiligen Autor:innen und Mitwirkenden entsprechend.</p>
+        <p>Einzelne Lizenzen können dir Rechte zum Verwenden, Kopieren, Modifizieren und Weiterverbreiten einräumen – oft unter bestimmten Bedingungen. Maßgeblich ist jeweils der Lizenztext des Pakets.</p>
+      </div>
+    </section>
+  </section>
+
+  <!-- ===================== EN ===================== -->
+  <section id="en" class="hide">
+    <div class="card">
+      <h2>About this page</h2>
+      <p><strong>ReMe</strong> uses certain third-party libraries and open-source packages to provide a better experience. We use these components in compliance with their respective licenses.</p>
+      <p>By using the App, you acknowledge and agree that:</p>
+      <ul>
+        <li>Parts of the App may incorporate third-party code licensed under open-source or other licenses.</li>
+        <li>All third-party packages and their licenses are listed in the App and/or on this page.</li>
+      </ul>
+      <p class="muted">Contact: <a href="mailto:info@althigro.com">info@althigro.com</a> · Althigro Software UG (haftungsbeschränkt)</p>
+    </div>
+
+    <!-- EN iOS -->
+    <section id="en-ios">
+      <h2>Third-Party Licenses · iOS</h2>
+
+      <div class="card">
+        <h3>Google Mobile Ads SDK (AdMob)</h3>
+        <ul>
+          <li>Provided by: Google LLC</li>
+          <li>Purpose: Deliver in-app advertisements</li>
+          <li>Policies/Info:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google Terms of Service</a><br>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Google User Messaging Platform SDK (UMP)</h3>
+        <ul>
+          <li>Provided by: Google LLC</li>
+          <li>Purpose: Request and manage user consent in accordance with privacy regulations (e.g., GDPR/CCPA)</li>
+          <li>Policies/Info:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a><br>
+          <a href="https://developers.google.com/admob/ump" target="_blank" rel="noopener">UMP Documentation</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ZIPFoundation</h3>
+        <ul>
+          <li>Author: Thomas Zoechling</li>
+          <li>Website: <a href="https://www.peakstep.com" target="_blank" rel="noopener">https://www.peakstep.com</a></li>
+          <li>License: MIT License</li>
+        </ul>
+        <h4>MIT License</h4>
+        <pre>Copyright (c) 2017-2024 Thomas Zoechling (https://www.peakstep.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+      </div>
+
+      <div class="card">
+        <h3>Disclaimer</h3>
+        <p>We do not claim ownership of any third-party components used in the App, and we give full credit to the respective authors and contributors of such software.</p>
+        <p>These licenses may grant you rights to use, copy, modify, and distribute the software, often under specific conditions. Please refer to the license text included with each package for details.</p>
+      </div>
+    </section>
+
+    <!-- EN Android -->
+    <section id="en-android" class="hide">
+      <h2>Third-Party Licenses · Android</h2>
+
+      <div class="card">
+        <h3>Google Mobile Ads SDK (AdMob)</h3>
+        <ul>
+          <li>Provided by: Google LLC</li>
+          <li>Purpose: Deliver in-app advertisements</li>
+          <li>Policies/Info:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google Terms of Service</a><br>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Google User Messaging Platform SDK (UMP)</h3>
+        <ul>
+          <li>Provided by: Google LLC</li>
+          <li>Purpose: Request and manage user consent in accordance with privacy regulations (e.g., GDPR/CCPA)</li>
+          <li>Policies/Info:</li>
+        </ul>
+        <p>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a><br>
+          <a href="https://developers.google.com/admob/ump" target="_blank" rel="noopener">UMP Documentation</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Disclaimer</h3>
+        <p>We do not claim ownership of any third-party components used in the App, and we give full credit to the respective authors and contributors of such software.</p>
+        <p>These licenses may grant you rights to use, copy, modify, and distribute the software, often under specific conditions. Please refer to the license text included with each package for details.</p>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  © 2025 Althigro Software UG (haftungsbeschränkt)
+</footer>
+
+<script>
+  // --- GitHub Pages friendly language + platform switch (no server) ---
+  const $ = (sel) => document.querySelector(sel);
+
+  // language nodes
+  const de = $('#de'), en = $('#en');
+  const tde = $('#title-de'), ten = $('#title-en');
+  const bde = $('#btn-de'), ben = $('#btn-en');
+
+  // platform nodes (each language has its own)
+  const bios = $('#btn-ios'), band = $('#btn-android');
+
+  const deIOS = $('#de-ios'), deAND = $('#de-android');
+  const enIOS = $('#en-ios'), enAND = $('#en-android');
+
+  function setLang(lang, pushState = true) {
+    const isDE = (lang === 'de');
+    de.classList.toggle('hide', !isDE);
+    en.classList.toggle('hide', isDE);
+    tde.classList.toggle('hide', !isDE);
+    ten.classList.toggle('hide', isDE);
+    bde.setAttribute('aria-pressed', isDE ? 'true' : 'false');
+    ben.setAttribute('aria-pressed', isDE ? 'false' : 'true');
+
+    // Keep URL stable for linking from index.html
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    if (pushState) history.replaceState({}, '', url.toString());
+  }
+
+  function setPlatform(platform, pushState = true) {
+    const isIOS = (platform === 'ios');
+
+    bios.setAttribute('aria-pressed', isIOS ? 'true' : 'false');
+    band.setAttribute('aria-pressed', isIOS ? 'false' : 'true');
+
+    deIOS.classList.toggle('hide', !isIOS);
+    deAND.classList.toggle('hide', isIOS);
+
+    enIOS.classList.toggle('hide', !isIOS);
+    enAND.classList.toggle('hide', isIOS);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('platform', platform);
+    if (pushState) history.replaceState({}, '', url.toString());
+  }
+
+  function initialLang() {
+    const url = new URL(window.location.href);
+    const q = (url.searchParams.get('lang') || '').toLowerCase();
+    if (q === 'de' || q === 'en') return q;
+    const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    return nav.startsWith('de') ? 'de' : 'en';
+  }
+
+  function initialPlatform() {
+    const url = new URL(window.location.href);
+    const p = (url.searchParams.get('platform') || '').toLowerCase();
+    if (p === 'ios' || p === 'android') return p;
+    return 'ios';
+  }
+
+  bde.addEventListener('click', () => setLang('de'));
+  ben.addEventListener('click', () => setLang('en'));
+
+  bios.addEventListener('click', () => setPlatform('ios'));
+  band.addEventListener('click', () => setPlatform('android'));
+
+  setLang(initialLang(), /*pushState*/ false);
+  setPlatform(initialPlatform(), /*pushState*/ false);
+</script>
+</body>
+</html>
