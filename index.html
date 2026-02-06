@@ -1,158 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Althigro Software UG (haftungsbeschränkt)</title>
+  <meta name="description" content="Althigro Software UG (haftungsbeschränkt) – Entwicklung, Vertrieb und Lizenzierung von Softwarelösungen sowie IT-Dienstleistungen. Apps: ReMe.">
+  <meta name="robots" content="index,follow">
 
+  <!-- Same styling as the ReMe legal pages -->
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: #FFFFFF;
-      color: #333;
-    }
-    header {
-      background: #FFFFFF;
-      color: #262C34;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 0.9rem;
-    }
-    .lang-switch a {
-      margin-left: 0.5rem;
-    }
-    main {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      margin: 3rem 0;
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    :root { color-scheme: light dark; }
+    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:#222;line-height:1.55}
+    header,footer{padding:1.5rem 1rem;text-align:center;border-bottom:1px solid #eee}
+    footer{border-top:1px solid #eee;border-bottom:none}
+    main{max-width:860px;margin:1.5rem auto;padding:0 1rem 3rem}
+    h1,h2,h3{margin:1.2rem 0 .6rem}
+    .card{background:#fff;border:1px solid #eee;border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+    .muted{color:#666;font-size:.95rem}
+    .langswitch{display:flex;gap:.5rem;justify-content:center;margin:.5rem 0 0}
+    .langswitch button{border:1px solid #ddd;background:#fafafa;padding:.4rem .8rem;border-radius:999px;cursor:pointer}
+    .langswitch button[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
+    .hide{display:none}
+    a{color:#0b61ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    ul{margin:.2rem 0 .8rem 1.2rem}
+    @media (prefers-color-scheme: dark){
+      body{background:#0b0b0b;color:#eaeaea}
+      header,footer{border-color:#222}
+      .card{background:#111;border-color:#222}
+      .muted{color:#aaa}
+      .langswitch button{background:#1a1a1a;border-color:#333;color:#ddd}
+      .langswitch button[aria-pressed="true"]{background:#0b61ff;border-color:#0b61ff;color:#fff}
+      a{color:#6aa8ff}
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="lang-switch">
-      🌐
-      <a href="?lang=de">DE</a> |
-      <a href="?lang=en">EN</a>
+<header>
+  <img src="logo.svg" alt="Althigro Logo" width="110" height="110" style="aspect-ratio:1/1" />
+  <h1 id="title-de">Althigro Software UG (haftungsbeschränkt)</h1>
+  <h1 id="title-en" class="hide">Althigro Software UG (limited liability)</h1>
+
+  <div class="langswitch" aria-label="Language">
+    <button id="btn-de" aria-pressed="true">DE</button>
+    <button id="btn-en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== DE ===================== -->
+  <section id="de">
+    <div class="card">
+      <h2>Über uns</h2>
+      <p>
+        Die <strong>Althigro Software UG (haftungsbeschränkt)</strong> ist zuständig für Entwicklung, den Vertrieb und die
+        Lizenzierung von Softwarelösungen sowie die Erbringung von IT-Dienstleistungen, insbesondere Beratung, Schulung
+        und Support im Bereich Softwareentwicklung. Das Unternehmen bietet zudem digitale Apps insbesondere zur
+        Dokumentenverwaltung und Software-as-a-Service (SaaS) an sowie alle damit zusammenhängenden oder förderlichen
+        Geschäfte.
+      </p>
     </div>
 
-    <img src="./logo.svg" alt="Logo" width="150" />
-    <h1 id="title"></h1>
-  </header>
+    <div class="card">
+      <h2>Apps</h2>
 
-  <main>
-    <h2 id="about-title"></h2>
-    <p id="about-text"></p>
+      <h3>ReMe</h3>
+      <ul>
+        <li><a id="reme-terms" href="#">Allgemeine Geschäftsbedingungen</a></li>
+        <li><a id="reme-privacy" href="#">Datenschutzerklärung</a></li>
+        <li><a id="reme-licenses" href="#">Lizenzen</a></li>
+      </ul>
+      <p class="muted">ReMe ist eine App zur Organisation von Fristen (z. B. Gutscheine, Rechnungen, Abos, Tickets, Schulden).</p>
+    </div>
 
-    <h2 id="apps-title"></h2>
+    <div class="card">
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:info@althigro.com">info@althigro.com</a></p>
+    </div>
 
-    <h3>ReMe</h3>
-    <ul>
-      <li><a id="reme-terms" href="#"></a></li>
-      <li><a id="reme-privacy" href="#"></a></li>
-      <li><a id="reme-licenses" href="#"></a></li>
-    </ul>
+    <div class="card">
+      <h2>Impressum</h2>
+      <p>
+        Althigro Software UG (haftungsbeschränkt)<br />
+        Bergmannstr. 3<br />
+        80339 München<br />
+        Deutschland
+      </p>
+      <p>
+        Geschäftsführer: Alexander Groß, Matthias Groß<br />
+        Handelsregister: HRB 303179, Amtsgericht München<br />
+      </p>
+    </div>
+  </section>
 
-    <h2 id="contact-title"></h2>
-    <p>
-      E-Mail: <a href="mailto:info@althigro.com">info@althigro.com</a>
-    </p>
+  <!-- ===================== EN ===================== -->
+  <section id="en" class="hide">
+    <div class="card">
+      <h2>About us</h2>
+      <p>
+        <strong>Althigro Software UG (limited liability)</strong> develops, distributes and licenses software solutions and
+        provides IT services, in particular consulting, training and support in the field of software development. The
+        company also offers digital applications, especially for document management and software-as-a-service (SaaS),
+        as well as all related or supporting business activities.
+      </p>
+    </div>
 
-    <h2 id="imprint-title"></h2>
-    <p id="imprint-text"></p>
-  </main>
+    <div class="card">
+      <h2>Apps</h2>
 
-  <footer>
-    &copy; 2025 Althigro Software UG (haftungsbeschränkt)
-  </footer>
+      <h3>ReMe</h3>
+      <ul>
+        <li><a id="reme-terms-en" href="#">Terms &amp; Conditions</a></li>
+        <li><a id="reme-privacy-en" href="#">Privacy Policy</a></li>
+        <li><a id="reme-licenses-en" href="#">Licenses</a></li>
+      </ul>
+      <p class="muted">ReMe helps you keep track of due/expiry dates (e.g., vouchers, bills, subscriptions, tickets, debts).</p>
+    </div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang") === "en" ? "en" : "de";
+    <div class="card">
+      <h2>Contact</h2>
+      <p>E-mail: <a href="mailto:info@althigro.com">info@althigro.com</a></p>
+    </div>
 
-    const texts = {
-      de: {
-        title: "Althigro Software UG (haftungsbeschränkt)",
-        aboutTitle: "Über uns",
-        aboutText:
-          "Die Althigro Software UG (haftungsbeschränkt) ist zuständig für Entwicklung, den Vertrieb und die Lizenzierung von Softwarelösungen sowie die Erbringung von IT-Dienstleistungen, insbesondere Beratung, Schulung und Support im Bereich Softwareentwicklung. Das Unternehmen bietet zudem digitale Apps insbesondere zur Dokumentenverwaltung und Software-as-a-Service (SaaS) an sowie alle damit zusammenhängenden oder förderlichen Geschäfte.",
-        appsTitle: "Apps",
-        contactTitle: "Kontakt",
-        imprintTitle: "Impressum",
-        imprintText:
-          "Althigro Software UG (haftungsbeschränkt)<br />Bergmannstr. 3<br />80339 München<br />Deutschland<br /><br />Geschäftsführer: Alexander Groß, Matthias Groß<br />Handelsregister: HRB 303179, Amtsgericht München",
-        remeTermsLabel: "Allgemeine Geschäftsbedingungen",
-        remePrivacyLabel: "Datenschutzerklärung",
-        remeLicensesLabel: "Lizenzen"
-      },
-      en: {
-        title: "Althigro Software UG (limited liability)",
-        aboutTitle: "About us",
-        aboutText:
-          "Althigro Software UG (limited liability) is responsible for the development, distribution and licensing of software solutions as well as the provision of IT services, in particular consulting, training and support in the field of software development. The company also offers digital applications, especially for document management and software-as-a-service (SaaS), as well as all related or supporting business activities.",
-        appsTitle: "Apps",
-        contactTitle: "Contact",
-        imprintTitle: "Legal notice",
-        imprintText:
-          "Althigro Software UG (limited liability)<br />Bergmannstr. 3<br />80339 Munich<br />Germany<br /><br />Managing Directors: Alexander Groß, Matthias Groß<br />Commercial Register: HRB 303179, Munich District Court",
-        remeTermsLabel: "Terms & Conditions",
-        remePrivacyLabel: "Privacy Policy",
-        remeLicensesLabel: "Licenses"
-      }
-    };
+    <div class="card">
+      <h2>Legal notice</h2>
+      <p>
+        Althigro Software UG (limited liability)<br />
+        Bergmannstr. 3<br />
+        80339 Munich<br />
+        Germany
+      </p>
+      <p>
+        Managing Directors: Alexander Groß, Matthias Groß<br />
+        Commercial Register: HRB 303179, Munich District Court<br />
+      </p>
+    </div>
+  </section>
+</main>
 
-    const t = texts[lang];
+<footer>
+  © 2025 Althigro Software UG (haftungsbeschränkt)
+</footer>
 
-    document.documentElement.lang = lang;
-    document.getElementById("title").innerText = t.title;
-    document.getElementById("about-title").innerText = t.aboutTitle;
-    document.getElementById("about-text").innerText = t.aboutText;
-    document.getElementById("apps-title").innerText = t.appsTitle;
-    document.getElementById("contact-title").innerText = t.contactTitle;
-    document.getElementById("imprint-title").innerText = t.imprintTitle;
-    document.getElementById("imprint-text").innerHTML = t.imprintText;
+<script>
+  // --- GitHub Pages friendly language switch + localized ReMe links ---
+  const $ = (sel) => document.querySelector(sel);
 
-    const terms = document.getElementById("reme-terms");
-    const privacy = document.getElementById("reme-privacy");
-    const licenses = document.getElementById("reme-licenses");
+  const deSection = $('#de');
+  const enSection = $('#en');
 
-    terms.href = `reme-terms-conditions.html?lang=${lang}`;
-    privacy.href = `reme-privacy.html?lang=${lang}`;
-    licenses.href = `reme-licenses.html?lang=${lang}`;
+  const titleDE = $('#title-de');
+  const titleEN = $('#title-en');
 
-    terms.innerText = t.remeTermsLabel;
-    privacy.innerText = t.remePrivacyLabel;
-    licenses.innerText = t.remeLicensesLabel;
-  </script>
+  const btnDE = $('#btn-de');
+  const btnEN = $('#btn-en');
+
+  // DE links
+  const remeTermsDE = $('#reme-terms');
+  const remePrivacyDE = $('#reme-privacy');
+  const remeLicensesDE = $('#reme-licenses');
+
+  // EN links (separate IDs to keep markup simple)
+  const remeTermsEN = $('#reme-terms-en');
+  const remePrivacyEN = $('#reme-privacy-en');
+  const remeLicensesEN = $('#reme-licenses-en');
+
+  function setLang(lang, pushState = true) {
+    const isDE = (lang === 'de');
+
+    deSection.classList.toggle('hide', !isDE);
+    enSection.classList.toggle('hide', isDE);
+
+    titleDE.classList.toggle('hide', !isDE);
+    titleEN.classList.toggle('hide', isDE);
+
+    btnDE.setAttribute('aria-pressed', isDE ? 'true' : 'false');
+    btnEN.setAttribute('aria-pressed', isDE ? 'false' : 'true');
+
+    // update ReMe links with ?lang=...
+    remeTermsDE.href = `reme-terms-conditions.html?lang=de`;
+    remePrivacyDE.href = `reme-privacy.html?lang=de`;
+    remeLicensesDE.href = `reme-licenses.html?lang=de`;
+
+    remeTermsEN.href = `reme-terms-conditions.html?lang=en`;
+    remePrivacyEN.href = `reme-privacy.html?lang=en`;
+    remeLicensesEN.href = `reme-licenses.html?lang=en`;
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    if (pushState) history.replaceState({}, '', url.toString());
+  }
+
+  function initialLang() {
+    const url = new URL(window.location.href);
+    const q = (url.searchParams.get('lang') || '').toLowerCase();
+    const hash = (window.location.hash || '').replace('#','').toLowerCase();
+
+    if (q === 'de' || hash === 'de') return 'de';
+    if (q === 'en' || hash === 'en') return 'en';
+
+    const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    return nav.startsWith('de') ? 'de' : 'en';
+  }
+
+  btnDE.addEventListener('click', () => setLang('de'));
+  btnEN.addEventListener('click', () => setLang('en'));
+
+  setLang(initialLang(), /*pushState*/ false);
+</script>
 </body>
 </html>
