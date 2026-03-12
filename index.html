@@ -115,7 +115,7 @@
         <li><a id="reme-terms-en" href="#">Terms &amp; Conditions</a></li>
         <li><a id="reme-privacy-en" href="#">Privacy Policy</a></li>
         <li><a id="reme-licenses-en" href="#">Licenses</a></li>
-        <li><a id="reme-redirect" href="#">Get ReMe now!</a></li>
+        <li><a id="reme-redirect-en" href="#">Get ReMe now!</a></li>
       </ul>
       <p class="muted">ReMe helps you keep track of due/expiry dates (e.g., vouchers, bills, subscriptions, tickets, debts).</p>
     </div>
@@ -168,7 +168,7 @@
   const remeTermsEN = $('#reme-terms-en');
   const remePrivacyEN = $('#reme-privacy-en');
   const remeLicensesEN = $('#reme-licenses-en');
-  const remeRedirectEN = $('#reme-redirect');
+  const remeRedirectEN = $('#reme-redirect-en');
 
   function setLang(lang, pushState = true) {
     const isDE = (lang === 'de');
@@ -186,12 +186,12 @@
     remeTermsDE.href = `reme-terms-conditions.html?lang=de`;
     remePrivacyDE.href = `reme-privacy.html?lang=de`;
     remeLicensesDE.href = `reme-licenses.html?lang=de`;
-    remeRedirectDE.href = `reme-redirect`;
+    remeRedirectDE.href = `reme-redirect.html`;
 
     remeTermsEN.href = `reme-terms-conditions.html?lang=en`;
     remePrivacyEN.href = `reme-privacy.html?lang=en`;
     remeLicensesEN.href = `reme-licenses.html?lang=en`;
-    remeRedirectEN.href = `reme-redirect`;
+    remeRedirectEN.href = `reme-redirect.html`;
 
     const url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
