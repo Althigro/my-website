@@ -70,6 +70,7 @@
         <li><a id="reme-terms" href="#">Allgemeine Geschäftsbedingungen</a></li>
         <li><a id="reme-privacy" href="#">Datenschutzerklärung</a></li>
         <li><a id="reme-licenses" href="#">Lizenzen</a></li>
+        <li><a id="reme-redirect" href="#">Hol Dir ReMe jetzt!</a></li>
       </ul>
       <p class="muted">ReMe ist eine App zur Organisation von Fristen (z. B. Gutscheine, Rechnungen, Abos, Tickets, Schulden).</p>
     </div>
@@ -114,6 +115,7 @@
         <li><a id="reme-terms-en" href="#">Terms &amp; Conditions</a></li>
         <li><a id="reme-privacy-en" href="#">Privacy Policy</a></li>
         <li><a id="reme-licenses-en" href="#">Licenses</a></li>
+        <li><a id="reme-redirect" href="#">Get ReMe now!</a></li>
       </ul>
       <p class="muted">ReMe helps you keep track of due/expiry dates (e.g., vouchers, bills, subscriptions, tickets, debts).</p>
     </div>
@@ -160,11 +162,13 @@
   const remeTermsDE = $('#reme-terms');
   const remePrivacyDE = $('#reme-privacy');
   const remeLicensesDE = $('#reme-licenses');
+  const remeRedirectDE = $('#reme-redirect');
 
   // EN links (separate IDs to keep markup simple)
   const remeTermsEN = $('#reme-terms-en');
   const remePrivacyEN = $('#reme-privacy-en');
   const remeLicensesEN = $('#reme-licenses-en');
+  const remeRedirectEN = $('#reme-redirect');
 
   function setLang(lang, pushState = true) {
     const isDE = (lang === 'de');
